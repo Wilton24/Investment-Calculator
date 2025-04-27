@@ -31,7 +31,7 @@ body {
   font-size: 1.5rem;
 }
 
-#user-input {
+#user-input, .logBtn {
   padding: 1rem;
   max-width: 30rem;
   margin: 2rem auto;
@@ -39,10 +39,20 @@ body {
   background: linear-gradient(180deg, #307e6c, #2b996d);
 }
 
-.input-group {
+.input-group, .logBtn{
   display: flex;
   justify-content: space-evenly;
   gap: 1.5rem;
+}
+
+.logBtn{
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer
+}
+
+.logBtn:hover{
+  background: linear-gradient(180deg, #2b996d, #307e6c);  
 }
 
 #user-input label {
@@ -85,5 +95,9 @@ body {
 }
 
 .center {
+  text-align: center;
+}
+
+#outputs{
   text-align: center;
 }
