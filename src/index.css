@@ -31,7 +31,7 @@ body {
   font-size: 1.5rem;
 }
 
-#user-input, .logBtn {
+#user-input {
   padding: 1rem;
   max-width: 30rem;
   margin: 2rem auto;
@@ -48,7 +48,9 @@ body {
 .logBtn{
   display: flex;
   justify-content: space-evenly;
-  cursor: pointer
+  cursor: pointer;
+  background: linear-gradient(180deg, #307e6c, #2b996d);
+  margin: 1rem auto;
 }
 
 .logBtn:hover{
@@ -99,8 +101,8 @@ body {
 }
 
 .buttons-container{
-  padding: 1rem;
-  max-width: 15rem;
+  padding: 0.5rem;
+  max-width: 9rem;
   margin: 2rem auto;
   border-radius: 4px;
   background: linear-gradient(180deg, #307e6c, #2b996d);

@@ -1,7 +1,7 @@
-import { useState } from "react";
-// import {IInvestment} from "../interface/interface";
+import React from "react";
+import {IInvestment} from "../interface/interface";
 
-export default function UserInput({investment, setInvestment}) {
+export default function UserInput({investment, setInvestment, handleCalculateInvestment}: {investment:IInvestment, setInvestment: any, handleCalculateInvestment: any}) {
 
 
   return (
@@ -12,7 +12,7 @@ export default function UserInput({investment, setInvestment}) {
           <input 
             type="number"
             value={investment.initialInvestment}
-            onChange={(e)=> setInvestment({...investment, initialInvestment: e.target.value})}
+            onChange={(e)=> handleCalculateInvestment("initialInvestment", e.target.value)}
              />
         </p>
         <p>
@@ -20,7 +20,7 @@ export default function UserInput({investment, setInvestment}) {
           <input 
             type="number"
             value={investment.annualInvestment}
-            onChange={(e)=> setInvestment({...investment, annualInvestment: e.target.value})}
+            onChange={(e)=> handleCalculateInvestment("annualInvestment", e.target.value)}
              />
         </p>
       </div>
@@ -31,7 +31,7 @@ export default function UserInput({investment, setInvestment}) {
           <input 
             type="number"
             value={investment.expectedReturn}
-            onChange={(e)=> setInvestment({...investment, expectedReturn: e.target.value})}
+            onChange={(e)=> handleCalculateInvestment("expectedReturn", e.target.value)}
              />
         </p>
         <p>
@@ -39,7 +39,7 @@ export default function UserInput({investment, setInvestment}) {
           <input 
             type="number"
             value={investment.duration}
-            onChange={(e)=> setInvestment({...investment, duration: e.target.value})}
+            onChange={(e)=> handleCalculateInvestment("duration", e.target.value)}
              />
         </p>
       </div>
